@@ -2,12 +2,17 @@ Class {
 	#name : #Tree,
 	#superclass : #Object,
 	#instVars : [
-		'data',
 		'left',
+		'data',
 		'right'
 	],
 	#category : #Nodos
 }
+
+{ #category : #visitor }
+Tree >> accept: anInOrdenVisitor [ 
+	anInOrdenVisitor visitTree: self.
+]
 
 { #category : #accessing }
 Tree >> data [
